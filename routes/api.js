@@ -18,7 +18,7 @@ router.get('/find', async (req, res) => {
     const base64files = [returnedB64];
 
     const data = {
-        api_key: "7E4jlVt4pSoW66TVd1WaQw7q24W9lQt9AgZx8L7qFUh8egr1zw",
+        api_key: req.query.apiKey,
         images: base64files,
         /* modifiers docs: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers */
         modifiers: ["crops_fast", "similar_images"],
